@@ -1,39 +1,13 @@
-import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
-import Button from "./Button";
+import Dropdown from "./components/Dropdown";
 
 function App() {
-  return (
-    <div>
-      <div>
-        <Button success rounded outline className="mb-5">
-          <GoBell />
-          Click me!
-        </Button>
-      </div>
-      <div>
-        <Button danger outline>
-          <GoCloudDownload />
-          Buy now!
-        </Button>
-      </div>
-      <div>
-        <Button warning>
-          <GoDatabase />
-          See Deal!
-        </Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          Hide Ads!
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          Accept Cookies
-        </Button>
-      </div>
-    </div>
-  );
+  const options = [
+    { label: "Red", value: "red" },
+    { label: "Green", value: "green" },
+    { label: "Blue", value: "blue" },
+  ];
+
+  return <Dropdown options={options} />;
 }
 
 export default App;
